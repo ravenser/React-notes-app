@@ -1,0 +1,94 @@
+.div-main{
+    padding: 10px 15px;
+}
+.table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.table-header{
+    background-color: hsl(0, 0%, 60%);
+    
+}
+
+.table-row{
+    background-color: hsl(196, 22%, 90%);
+    border-top: 8px solid hsl(0, 0%, 100%);
+    padding-left: 10px;   
+}
+
+th{
+    text-align: left;
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 95%);
+    padding: 4px;
+}
+td{
+    text-align: left;
+}
+
+th:nth-child(1), td:nth-child(1){
+    width: 8%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+th:last-child, td:last-child{
+    padding-right: 10px;
+}
+.icon-cell{
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+.icon-header{
+    color: white;
+}
+.icon-row{
+    color: hsl(0, 0%, 40%);
+    font-size: 1.2rem;
+}
+
+.category-icon{
+    background-color:  hsl(0, 0%, 45%);
+    color: hsl(0, 0%, 95%);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+}
+.button-row{
+    border: none;
+    background-color:  hsl(196, 22%, 90%);
+    padding: 7px 5px;
+    border-radius: 10px;
+}
+
+.button-between{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 5px;
+    background-color: hsl(0, 0%, 95%);
+}
+.button-between:hover{
+    background-color: hsl(0, 0%, 80%);
+}
+
+.button-row:hover{
+    background-color:  hsl(196, 22%, 80%);
+}
+.name{
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    color: hsl(0, 0%, 10%);
+}
+p{
+    font-family: monospace;
+    font-size: 1rem;
+    color: hsl(0, 0%, 40%);
+}
+
+.div-between{
+    padding-top: 15px;
+    padding-bottom: 45px;
+    text-align: end;
+}
