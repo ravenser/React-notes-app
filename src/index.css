@@ -81,10 +81,25 @@ th:last-child, td:last-child{
     font-weight: bold;
     color: hsl(0, 0%, 10%);
 }
-p{
+td p{
     font-family: monospace;
     font-size: 1rem;
     color: hsl(0, 0%, 40%);
+    white-space: nowrap;
+    
+    
+}
+td select, input{
+    font-family: monospace;
+    font-size: 1rem;
+    color: hsl(0, 0%, 40%);
+    background-color: hsl(196, 22%, 95%);
+    max-width: 100%;
+    width: 90%;
+    padding: none;
+    margin: 0px 5px;
+
+    
 }
 
 .div-between{

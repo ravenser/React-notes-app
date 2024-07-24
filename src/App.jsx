@@ -1,11 +1,49 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPencilAlt, faArchive, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping,faArchive, faTrash } from '@fortawesome/free-solid-svg-icons';
 import Note from './Note.jsx';
 import Category from './Category.jsx';
 import Archive from './Archive.jsx';
-
+import React, {useState} from 'react';
 function App() {
   
+  const [notes, SetNotes] = useState([{
+    'icon':faCartShopping,
+    'name':'Shopping list',
+    'created':new Date(),
+    'category':'Task',
+    'content':"Tomatoes, bread",
+    'dates': ''
+  },
+  {
+    'icon':faCartShopping,
+    'name':'Shopping list',
+    'created':new Date(),
+    'category':'Task',
+    'content':"Tomatoes, bread",
+    'dates': ''
+  },
+  {
+    'icon':faCartShopping,
+    'name':'Shopping list',
+    'created':new Date(),
+    'category':'Task',
+    'content':"Tomatoes, bread",
+    'dates': ''
+  },
+  {
+    'icon':faCartShopping,
+    'name':'Shopping list',
+    'created':new Date(),
+    'category':'Task',
+    'content':"Tomatoes, bread",
+    'dates': ''
+  }]);  
+  let [note, setNote] = useState()
+
+  const handleNoteChange = (updatedNote) =>{
+    setNote(updatedNote);
+    console.log(notes);
+  }
 
   return (
     <div className='div-main'>
@@ -24,11 +62,9 @@ function App() {
           </tr>
         </thead>
         <tbody>  
-          <Note></Note>
-          <Note></Note>
-          <Note></Note>
-          <Note></Note>
-          <Note></Note>
+          {notes.map((note, index)=> (
+            <Note key = {index} note = {note} updateNote = {handleNoteChange}/>
+          ))}
         </tbody>
       </table>
       <div className='div-between'>
