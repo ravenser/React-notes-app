@@ -42,7 +42,21 @@ function App() {
 
   const handleNoteChange = (updatedNote) =>{
     setNote(updatedNote);
-    console.log(notes);
+  }
+  const handleNoteDelete = (id) =>{
+    SetNotes(notes.filter((_,i)=>i!==id));
+  }
+
+  function handleNoteAdd(){
+    const newNote = {
+      'icon':faCartShopping,
+      'name':'',
+      'created':new Date(),
+      'category':'Task',
+      'content':"",
+      'dates': ''
+    }
+    SetNotes(n =>[...n, newNote]);
   }
 
   return (
@@ -63,12 +77,14 @@ function App() {
         </thead>
         <tbody>  
           {notes.map((note, index)=> (
-            <Note key = {index} note = {note} updateNote = {handleNoteChange}/>
+            <Note key = {index} note = {note} updateNote = {handleNoteChange} 
+            deleteNote = {handleNoteDelete} id = {index}/>
           ))}
         </tbody>
       </table>
       <div className='div-between'>
-        <button className='button-between'>Create Note</button>
+        <button className='button-between' onClick={handleNoteAdd}>
+        Create Note</button>
         <Archive></Archive>
       </div>
       <table className='table'>
